@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #timerDisplay {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 50px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    <div id="timerDisplay">00:00</div>
+    <div>
+        <input type="number" id="minutes" placeholder="MM" min="0">
+        <span>:</span>
+        <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+    </div>
+    <div>
+        <button id="startButton">Start</button>
+        <button id="pauseButton" disabled>Pause</button>
+        <button id="resetButton">Reset</button>
+    </div>
+
+    <script src="countdown.js"></script>
+</body>
+</html>
